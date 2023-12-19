@@ -78,6 +78,7 @@ def get_date(post):
 def starting_page(req):
     sorted_posts = sorted(all_posts, key=get_date)  # ????
     latest_posts = sorted_posts[-3:]
+
     return render(req, 'blog/index.html', {"posts": latest_posts})
 
 
@@ -86,6 +87,5 @@ def posts(req):
 
 
 def post_detaild(req, slug):
-    selected_post = next(post for post in all_posts if post["slug"] == slug)
-
+    selected_post = next(post for post in all_posts if post['slug'] == slug)
     return render(req, 'blog/post-detail.html', {"post": selected_post})
