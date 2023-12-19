@@ -6,11 +6,10 @@
 <li>
     <acticle class="post">
         <a href="{% url "posts-detail-page" "the-mountains" %}">
-            <img width="900" height="500" src="{% static "blog/images/everest.jpg" %}" alt="Mountain Hiking " />
+            <img width="900" height="500" src="{% static "blog/images/"|add:post.image %}" alt="Mountain Hiking " />
             <div class="post__content">
-                <h3>Mountain Hiking</h3>
-                <p>There isnithing like the views you get when hiking in the mountains! And 
-                    I wasnt even prpared whilst i was enjoying the view!</p>
+                <h3>{{post.title}}</h3>
+                <p>{{post.excerpt}}</p>
             </div>
         </a>
     </acticle>

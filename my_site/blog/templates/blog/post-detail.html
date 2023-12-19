@@ -15,23 +15,20 @@ All My Posts
 {% block content %}
 <section id="summary">
 <h2>
-    Post Title
+    {{post.title}}
 </h2>
 <acticle>
     <img width="100" height="100" src="{% static "blog/images/everest.jpg" %}" alt="Mountain Hiking " />
     <address>
         By Hennadii
         <div>
-            Last updated on <time> July 10th </time>
+            Last updated on <time> {{post.date|date:"d M Y" }} </time>
         </div>
     </address>
 </acticle>
 </section>
 
     <main>
-       <p>{% lorem 6 b random %}</p>
-       <p>{% lorem 6 b random %}</p>
-       <p>{% lorem 6 b random %}</p>
-       <p>{% lorem 6 b random %}</p>
+       <p>{{post.content}}</p>
     </main>
 {% endblock  %}
