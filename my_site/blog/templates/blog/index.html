@@ -1,0 +1,56 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %}
+My Blog
+{% endblock  %}
+
+{% block css_files %}
+<link rel="stylesheet" href="{% static 'blog/index.css' %}" />
+<link rel="stylesheet" href="{% static 'blog/post.css' %}" />
+{% endblock  %}
+
+
+
+{% block content %}
+
+  <section id="welcome">
+    <header>
+        <img src="{% static "blog/images/me.jpg" %}" alt="Hennadii - The Author Of This Blog" />
+        <h2>
+            Hennadii's blog
+        </h2>
+    </header>
+    <p>Hi, I am Hennadii and This is my blog</p>
+  </section>
+  <section id="latest-posts">
+    <h2>
+        My Latest Thoughts
+    </h2>
+    <ul>
+        <li>
+            <acticle class="post">
+                <a href="{% url "posts-detail-page" "the-mountains" %}">
+                    <img width="900" height="500" src="{% static "blog/images/everest.jpg" %}" alt="Mountain Hiking " />
+                    <div class="post__content">
+                        <h3>Mountain Hiking</h3>
+                        <p>There isnithing like the views you get when hiking in the mountains! And 
+                            I wasnt even prpared whilst i was enjoying the view!</p>
+                    </div>
+                </a>
+            </acticle>
+        </li>
+    </ul>
+  </section>
+  <section id="about">
+    <h2>
+        What I Do 
+    </h2>
+    <p>
+        I love programming, i love to help others and i enjoy exploring  new technologies in general!
+    </p>
+    <p>
+        My goal is to keep on growing as a developer - and if i could help you do the same, i'd be very happy!
+    </p>
+  </section>
+{% endblock  %}
