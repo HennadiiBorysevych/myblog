@@ -5,12 +5,16 @@ body {
   #main-navigation {
     background-color: #390281;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
+    
   }
   
   #summary {
     margin: 8rem auto 3rem auto;
     padding: 2rem;
     width: 90%;
+    display: flex;
+    align-items: center;
+
     max-width: 90rem;
     border-radius: 16px;
     background-color: #5706c0;
@@ -22,6 +26,7 @@ body {
   #summary h2 {
     color: white;
     font-size: 4.5rem;
+    margin-bottom: 0.5rem;
   }
   
   #summary article {
@@ -47,6 +52,11 @@ body {
     font-weight: bold;
   }
   
+  #summary a {
+    color: #fff;
+    text-decoration: underline;
+  }
+
   #summary time {
     font-weight: bold;
   } 
@@ -59,4 +69,11 @@ body {
     padding: 1rem;
     border-radius: 12px;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
+  }
+
+  .tag{
+    background-color: #fff;
+    color: #390281;
+    padding: 0.5rem 1rem;
+    border-radius: 8px;
   }
